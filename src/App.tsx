@@ -1,13 +1,12 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.scss'
-import {Footer, Header} from './components'
+import {Footer, Header} from 'components'
 
 const App = () => {
     return (
         <>
             <Header />
-            <p>1</p>
+            <main>1</main>
             <Footer />
         </>
     )

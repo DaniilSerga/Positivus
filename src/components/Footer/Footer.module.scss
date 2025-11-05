@@ -1,0 +1,5 @@
+@use 'styles/fonts' as *;
+
+.footerContainer > p {
+    @include typographyDesktop('p');
+}
