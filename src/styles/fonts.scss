@@ -1,0 +1,31 @@
+@use 'colors' as *;
+@use "sass:map";
+
+.typography {
+    color: $black;
+    font-family: SpaceGrotesk;
+}
+
+$fontStyles: (
+    'h1': (size: 60px, weight: 500),
+    'h2': (size: 40px, weight: 500),
+    'h3': (size: 30px, weight: 500),
+    'h4': (size: 20px, weight: 500),
+    'p': (size: 18px, weight: 400),
+);
+
+@mixin typographyDesktop($styleKey) {
+    @extend .typography;
+
+    @if not map.has-key($map: $fontStyles, $key: $styleKey) {
+        @warn '\'#{$styleKey}\' is a wrong style key. Use h1, h2, h3, h4 or p keys instead. Default paragraph values are used now';
+
+        $style: map.get($map: $fontStyles, $key: 'p');
+        font-size: map.get($map: $style, $key: size);
+        font-weight: map.get($map: $style, $key: weight);
+    } @else {
+        $style: map.get($map: $fontStyles, $key: $styleKey);
+        font-size: map.get($map: $style, $key: size);
+        font-weight: map.get($map: $style, $key: weight);
+    }
+}
