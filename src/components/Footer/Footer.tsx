@@ -73,7 +73,7 @@ const Footer: FC = () => {
                 </div>
                 <div className={styles.privacyPolicyContainer}>
                     <p>© 2023 Positivus. All Rights Reserved.</p>
-                    <a href="">Privacy Policy</a>
+                    <a href="#privacy-policy">Privacy Policy</a>
                 </div>
             </div>
         </footer>
