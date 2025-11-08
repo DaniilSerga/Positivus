@@ -1,6 +1,6 @@
 import React, {FC} from 'react'
 import styles from './Header.module.scss'
-import {ReactComponent as Logo} from 'assets/logo.svg'
+import {ReactComponent as Logo} from 'assets/icons/logo.svg'
 
 const Header: FC = () => {
     return (

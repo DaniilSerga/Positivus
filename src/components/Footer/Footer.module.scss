@@ -1,5 +1,148 @@
 @use 'styles/fonts' as *;
+@use 'styles/colors' as *;
 
-.footerContainer > p {
-    @include typographyDesktop('p');
+.footerContainer {
+    padding: 0 100px;
+    
+    & > p {
+        @include typographyDesktop('p');
+    }
+}
+
+.footerWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 55px 60px 50px;
+    background-color: $black;
+    border-radius: 45px 45px 0 0;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > svg {
+        fill: $white;
+    }
+}
+
+.linksContainer {
+    display: flex;
+    gap: 40px;
+
+    & > li > a {
+        @include typographyDesktop('p');
+        color: $grey;
+        text-decoration: underline;
+        transition: color 0.3s;
+
+        &:hover {
+            color: rgba($grey, 0.7);
+        }
+    }
+}
+
+.networksContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contactInfoContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 66px;
+}
+
+.contactUsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.contactUsLabelWrapper {
+    width: fit-content;
+    padding-inline: 7px;
+    background-color: $green;
+    border-radius: 7px;
+
+    & > h4 {
+        @include typographyDesktop('h4');
+    }
+}
+
+.contactsList {
+    max-width: 332px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    & > p,
+    & > p > a {
+        @include typographyDesktop('p');
+        color: $white;
+        text-decoration: none;
+    }
+
+    & > p > a {
+        transition: color 0.3s;
+
+        &:hover {
+            color: rgba($white, 0.7);
+        }
+    }
+}
+
+.subscriptionFormContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 58px 40px;
+    background-color: $charleston;
+    border-radius: 14px;
+
+    & > input {
+        @include typographyDesktop('p');
+        color: $white;
+        padding: 22px 35px;
+        background-color: transparent;
+        border: 1px solid $white;
+        border-radius: 14px;
+        height: fit-content;
+        
+        &::placeholder {
+            @include typographyDesktop('p');
+            color: $white;
+        }
+    }
+
+    & > button {
+        cursor: pointer;
+        @include typographyDesktop('h4');
+        background-color: $green;
+        border-radius: 14px;
+        padding: 20px 35px;
+        border: none;
+        outline: none;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: rgba($green, 0.7);
+        }
+    }
+}
+
+.privacyPolicyContainer {
+    display: flex;
+    gap: 40px;
+    padding-top: 50px;
+    margin-top: 50px;
+    border-top: 1px solid $white;
+
+    & > p,
+    & > a {
+        color: $white;
+        @include typographyDesktop('p');
+    }
 }
