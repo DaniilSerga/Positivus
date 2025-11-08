@@ -1,0 +1,23 @@
+@use 'styles/fonts' as *;
+@use 'styles/colors' as *;
+
+.headingContainer {
+    display: flex;
+    gap: 40px;
+    margin: 140px 0 80px;
+    
+    & > h4 {
+        @include typographyDesktop('p');
+        max-width: 580px;
+    }
+}
+
+.headingWrapper {
+    padding-inline: 7px;
+    background-color: $green;
+    border-radius: 7px;
+
+    & > h2 {
+        @include typographyDesktop('h2');
+    }
+}

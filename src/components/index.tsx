@@ -1,4 +1,6 @@
-import {Footer} from './Footer'
-import {Header} from './Header'
+import {Footer} from './Footer';
+import {Header} from './Header';
+import {Button} from './Button';
+import {Head, Services} from './Sections';
 
-export {Footer, Header}
+export {Button, Footer, Header, Head, Services};

@@ -1,0 +1,38 @@
+@use 'styles/fonts' as *;
+@use 'styles/colors' as *;
+
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.headWrapper {
+    display: flex;
+    justify-content: space-between;
+
+    & > img {
+        max-width: 600px;
+        max-height: 515px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.headLabel {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 35px;
+    max-width: 531px;
+
+    & > h1 {
+        @include typographyDesktop('h1');
+    }
+
+    & > p {
+        @include typographyDesktop('h4');
+        font-weight: 400;
+        line-height: 28px;
+    }
+}

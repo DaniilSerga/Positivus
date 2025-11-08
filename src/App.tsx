@@ -1,15 +1,18 @@
-import React from 'react'
-import './App.scss'
-import {Footer, Header} from 'components'
+import React from 'react';
+import {Footer, Head, Header, Services} from 'components';
+import styles from './App.module.scss';
 
 const App = () => {
-    return (
-        <>
-            <Header />
-            <main>1</main>
-            <Footer />
-        </>
-    )
-}
+	return (
+		<>
+			<Header />
+			<main className={styles.sectionsWrapper}>
+				<Head />
+				<Services />
+			</main>
+			<Footer />
+		</>
+	);
+};
 
-export default App
+export default App;
